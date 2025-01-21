@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="all"> <!--전체-->
+
+        <section id="alllist"> <!--모든상품리스트 영역-->
+            
+            <div class="search"> <!--검색 영역-->
+                <input type="text" name="" id="search" placeholder="여기에 상품을 입력하세요" oninput="jasontolist()">
+            </div>
+
+            <div class="all_list"> <!--모든상품리스트-->
+
+                <!-- <div class="item">
+                    <img src="./상품사진/product_1.jpg" width="100px" height="100px">
+                    <div id="textbox">
+                        <h1 id="name">마틸라</h1>
+                        <h4 id="brand">마틸라</h4>
+                    </div>
+                    <h1 class="price">25000원</h1>
+                </div> -->
+
+            </div>
+
+            <div class="drop"> <!--드롭영역-->
+                <h1>이곳에 상품을 넣어주세요</h1>
+            </div>
+
+        </section>
+
+        <section id="shoppingbag"> <!--장바구니 영역-->
+
+            <div class="shopping_list"> <!--상품영역-->
+
+                <!-- <div class="item">
+                        <img src="./상품사진/product_1.jpg" width="100px" height="100px">
+                        <div id="textbox">
+                            <h1 id="name">마틸라</h1>
+                            <h4 id="brand">마틸라</h4>
+                        </div>
+                        <h1 class
+                        ="price">25000원</h1>
+                        <button id="minus">-</button>
+                        <h5 id="cnt">1</h5>
+                        <button id="plus">+</button>
+                        <button id="remove">삭제</button>
+                    </div> -->
+
+            </div>
+
+            <div class="paying_region"> <!--계산영역-->
+                <button class="purchase_btn">구매하기</button>
+                <h1>합계</h1>
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="modal">
+        <div class="modal_body">
+            <h2>구매를 완료하세요</h2>
+            <button class="cancle">X</button>
+            <input type="text" name="" id="name" placeholder="여기에 이름을 입력하세요">
+            <input type="text" name="" id="adress" placeholder="여기에 주소을 입력하세요">
+            <button class="complete">구매 완료</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
