@@ -8,7 +8,7 @@ async function jasontolist() {
         const response = await fetch('./store.json');
         jsonData = await response.json();
         if (!alreadydraw) {
-            draw_al(jsonData);
+            draw_al(jsonData);  
             draw_sb();
             alreadydraw = true;
         }
@@ -133,13 +133,27 @@ function search(data) {
         filterData = data.filter(staff => 
             hanguel(staff['product_name'].toLowerCase()).includes(cho)
         );
+        console.log(filterData);
+        filterData.forEach(e => {
+            console.log(hanguel(e.product_name));
+            const cho_pn = hanguel(e.product_name);
+            for (let i=0; i<cho_pn.length; i++){
+                if(cho_pn[i]=== cho[0]){
+                    e.product_name= e.product_name.replace(e.product_name[i], `<span class="highlight">${e.product_name[i]}</span>`);
+                    e.product_name = e.product_name.replace(e.product_name[i + cho.length ], `${e.product_name[i + cho.length - 1]}</span>`);
+                    console.log(e.product_name);
+                }
+            }
+        });
+        
     } else {
         filterData = data.filter(staff => 
             staff['product_name'].toLowerCase().includes(name)
         );
+        filterData.forEach(e => {
+            e.product_name=e.product_name.replace(name, `<span class="highlight">${name}</span>`)
+        });
     }
-
-    
 
     draw_al(filterData.length === 0 ? []: filterData);
 }
