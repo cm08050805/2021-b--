@@ -11,7 +11,7 @@ export default class Search {
     addEvent() {
         const SEARCH = this.searchInput.addEventListener("input", this.search.bind(this))
     }
-
+    
     search() {
         const SEARCH = this.searchInput.value;
 
