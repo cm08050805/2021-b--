@@ -202,24 +202,24 @@ header {
     margin-top: 300px; 
 }
 
-.review_box {
+.review_region {
     display: flex;
 }
 
-.review_box > img {
+.review_region > img {
     width: 1190px;
 }
 
-.text_box {
-    background-color :gainsboro;
-    width : 420px;
+.review_text {
+    background-color : #ffeacd;
+    width : 410px;
 }
 
-.text_box_img {
+.rt_img {
     display: flex;
 }
 
-.text_box_img > img {
+.rt_img > img {
     width: 100px;
     border-radius: 50px;
     margin-bottom: 30px;
@@ -227,9 +227,11 @@ header {
 
 .info > p {
     align-items: center;
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
-.footer {
+#footer {
     margin-top: 120px;
     background-color: gainsboro;
     width: 1600px;
