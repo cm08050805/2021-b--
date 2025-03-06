@@ -1,0 +1,160 @@
+#slide_box {
+    width: 1600px;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 150px;
+}
+
+#slider {
+    animation: slide 10s linear infinite;
+    position: absolute;
+}
+
+.slide {
+    width: 1600px;
+    height: 1200px;
+    font-size: 50px;
+    position: absolute;
+    background-size : contain;
+}
+
+.slide > h4 {
+    position: absolute;
+    margin-top: 700px;
+}
+
+#slide1, #slide5 {
+    background-image: url("./images/07.jpg");
+}
+
+#slide1 {
+    left: 0px;
+}
+
+#slide2 {
+    left: 1600px;
+    background-image: url("./images/08.jpg");
+}
+
+#slide3 {
+    left: 3200px;
+    background-image: url("./images/09.jpg");
+}
+
+#slide4 {
+    left: 4800px;
+    background-image: url("./images/10.jpg");
+}
+
+#slide5 {
+    left: 6400px;
+}
+
+@keyframes slide {
+    0% {
+        left: 0%;
+    }
+
+    10% {
+        left: 0%;
+    }
+
+    15% {
+        left: -100%;
+    }
+
+    35% {
+        left: -100%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    60% {
+        left: -200%;
+    }
+
+    65% {
+        left: -300%;
+    }
+
+    85% {
+        left: -300%;
+    }
+
+    90% {
+        left: -400%;
+    }
+
+    100% {
+        animation-fill-mode : forwards;
+    }
+
+}
+
+#ranking {
+    margin-top: 100px;
+}
+
+#check-summary {
+    display: none;
+}
+
+details {
+    width: 100%;
+    text-align: left;
+    margin: 0 0 24px 0;
+
+    max-height: 2em;
+    overflow: hidden;
+    transition: max-height 400ms ease-out;
+}
+
+details:last-child {
+    margin: 0 0 0 0;
+}
+
+#check-summary:checked+details {
+    max-height: 250px;
+}
+
+details>summary {
+    width: 100%;
+}
+
+details>summary::marker {
+    content: '';
+}
+
+details>summary>label[for="check-summary"]::before {
+    content: "!";
+    margin: 0 24px 0 0;
+}
+
+details>summary>label[for="check-summary"] {
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    line-height: 1.18;
+    color: #05309D;
+    margin: 0 0 24px 0;
+    cursor:pointer;
+}
+
+#check-summary:checked+details>summary>label[for="check-summary"]::after {
+    transform: scaleY(-1);
+}
+
+details>.content {
+    font-size: 18px;
+    font-weight: var(--font-weight-regular);
+    letter-spacing: 0px;
+    line-height: 1.4;
+    color: #181B21;
+    background-color: #F7F8F8;
+    border-radius: 10px;
+    padding: 32px 24px;
+}
