@@ -96,63 +96,69 @@
 
 #ranking {
     margin-top: 100px;
+    display: flex;
 }
 
-#check-summary {
+/* #league {
+    
+} */
+
+#check-btn {
+    display: none; 
+}
+
+#check-btn:checked ~ .top {
+    display: block; 
+}
+
+.top {
+    display: none; 
+}
+
+.rank {
+    width: 300px;
+    height: auto;
+    margin-left: 150px;
+}
+
+input[type="radio"] {
     display: none;
 }
 
 details {
-    width: 100%;
+    width: 300px;
     text-align: left;
     margin: 0 0 24px 0;
-
     max-height: 2em;
     overflow: hidden;
     transition: max-height 400ms ease-out;
 }
 
 details:last-child {
-    margin: 0 0 0 0;
+    margin: 0;
 }
 
-#check-summary:checked+details {
-    max-height: 250px;
+input[type="radio"]:checked + details {
+    max-height: 300px;
 }
 
-details>summary {
+summary {
     width: 100%;
-}
-
-details>summary::marker {
-    content: '';
-}
-
-details>summary>label[for="check-summary"]::before {
-    content: "!";
-    margin: 0 24px 0 0;
-}
-
-details>summary>label[for="check-summary"] {
-    display: flex;
     font-size: 22px;
     font-weight: bold;
-    letter-spacing: 0px;
-    line-height: 1.18;
     color: #05309D;
-    margin: 0 0 24px 0;
-    cursor:pointer;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-#check-summary:checked+details>summary>label[for="check-summary"]::after {
-    transform: scaleY(-1);
+summary::before {
+    content: "!";
+    margin-right: 10px;
 }
 
-details>.content {
+.content {
     font-size: 18px;
-    font-weight: var(--font-weight-regular);
-    letter-spacing: 0px;
-    line-height: 1.4;
     color: #181B21;
     background-color: #F7F8F8;
     border-radius: 10px;
