@@ -1,0 +1,107 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+input{
+    display: none;
+}
+
+.red {
+    background-color: red;
+}
+
+
+.blue {
+    background-color: blue;
+}
+
+
+.green {
+    background-color: green;
+}
+
+#visual {
+    position: relative;
+    width: 80%;
+    height: 600px;
+    background-color: gray;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#visual:hover .slides {
+    animation-play-state: paused;
+}
+
+.slides {
+    position: absolute;
+    width: 400%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    display: none;
+    animation-name: 아무거나;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+.slide {
+    width: 25%;
+    height: 600px;
+
+}
+
+#slide3:checked ~ .buttons > .button:nth-child(3),
+#slide2:checked ~ .buttons > .button:nth-child(2),
+#slide1:checked ~ .buttons > .button:nth-child(1),
+#slide3:checked ~ #visual > .slides:nth-child(3),
+#slide2:checked ~ #visual > .slides:nth-child(2),
+#slide1:checked ~ #visual > .slides:nth-child(1) {
+    display: flex;
+}
+#slide3:checked ~ #visual,
+#slide1:checked ~ #visual,
+#slide1:checked ~ #visual {}
+
+@keyframes  아무거나 {
+    0% {
+        left: 0;
+    } 30% {
+        left: 0%;
+    } 33% {
+        left: -100%;
+    } 63% {
+        left: -100%;
+    } 66% {
+        left: -200%;
+    } 96% {
+        left: -200%;
+    } 100% {
+        left: -300%;
+    }
+}
+
+.buttons {
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.button {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 100px;
+    display: none;
+}
+
+.button label {
+    cursor: pointer;
+}
