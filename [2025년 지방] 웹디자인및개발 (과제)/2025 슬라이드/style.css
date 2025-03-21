@@ -50,9 +50,8 @@ input{
 }
 
 .slide {
-    width: 25%;
+    width: 100%;
     height: 600px;
-
 }
 
 #slide3:checked ~ .buttons > .button:nth-child(3),
@@ -63,9 +62,6 @@ input{
 #slide1:checked ~ #visual > .slides:nth-child(1) {
     display: flex;
 }
-#slide3:checked ~ #visual,
-#slide1:checked ~ #visual,
-#slide1:checked ~ #visual {}
 
 @keyframes  아무거나 {
     0% {
@@ -89,6 +85,7 @@ input{
     width: 80%;
     margin: auto;
     position: relative;
+    margin-top: -350px;
 }
 
 .button {
