@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>HTML/CSS 드롭다운메뉴</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .surve {
+            display: none;
+            height: 500px;
+            flex-direction: column;
+        }
+
+        #menu {
+            font: bold 16px "malgun gothic";
+            width: 700px;
+            height: 50px;
+            background: #ccc;
+            color: black;
+            line-height: 50px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+
+        #menu>ul>li>ul {
+            width: 130px;
+            display: none;
+            position: absolute;
+            font-size: 14px;
+            background: skyblue;
+        }
+
+        #menu>ul>li:hover>.surve {
+            display: flex;
+            animation: fadeInDown 1s;
+        }
+
+        #menu>ul>li>div>a:hover {
+            background: orange;
+            transition: ease 1s;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <ul>
+            <li><a href="#">MENU1</a>
+                <div class="surve">
+                    <a href="#">SUB_MENU</a>
+                    <a href="#">SUB_MENU2</a>
+                    <a href="#">SUB_MENU3</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
