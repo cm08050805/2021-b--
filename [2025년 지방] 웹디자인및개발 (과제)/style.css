@@ -40,7 +40,7 @@
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
-    animation: rotation 4s linear;
+    animation: rotation 3.5s linear;
     }
 
     @keyframes rotation {
@@ -65,6 +65,71 @@ header {
     width: 100%;
     height: 50px;
     border-bottom: 5px solid #e0e0e0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.surve_menu {
+    display: none;
+    height: 200px;
+    flex-direction: column;
+    background: #C1D6F6;
+}
+
+#menu {
+    font: bold 16px "malgun gothic";
+    width: 700px;
+    height: 50px;
+    color: black;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+#menu>ul>li>ul {
+    width: 130px;
+    display: none;
+    position: absolute;
+    font-size: 14px;
+    background: skyblue;
+}
+
+header:hover #menu > ul > li > .surve_menu {
+    display: flex;
+    animation: fadeInDown 1s;
+    box-shadow: 0px 1px 5px black;
+}
+
+#menu>ul>li>div>a:hover {
+    background: #F2F2F2;
+    transition: ease 1s;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 a {

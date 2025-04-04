@@ -1,0 +1,167 @@
+html {
+    height:100vh;
+    scroll-behavior: smooth;
+}
+
+#container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+footer {
+    grid-row:3/4;
+    height:50px;
+}
+
+.out {
+    opacity: 1;
+    transform-origin: top center;
+    transform:scaleY(1);
+    transition:all 0.5s;
+}
+
+.out.fade-out {
+    transform:scaleY(0);
+    opacity: 0;
+}
+
+.none-select
+{
+    user-select: none;
+}
+
+/*모달 팝업 */
+.modal-background
+{
+    position:fixed;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-background.on
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-inner
+{
+    background-color: #fff;
+    border-radius: 10px;
+    width:80%;
+    height:80%;
+}
+
+.modal-inner .info
+{
+    flex-basis: 40px;
+    flex-grow: 0;
+}
+
+.modal-inner .product-order-container
+{
+    flex-basis: 500px;
+    overflow: hidden;
+}
+
+#productSection
+{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal-inner .product-order-container .products
+{
+    flex-basis: 70%;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 220px;
+}
+
+.modal-inner .product-order-container .order
+{
+    flex-basis: 25%;
+}
+
+.product.off
+{
+    opacity: 0.4;
+}
+
+.product .card-body
+{
+    overflow:hidden;
+    overflow-y: auto;
+}
+.product .card-img-top
+{
+    height:100px;
+    width: auto;
+    object-fit: cover;
+}
+
+.order-product > img
+{
+    width:42px;
+    height:42px;
+    object-fit: cover;
+}
+
+.order-product .button-row .count
+{
+    width: 50px;
+    font-size:0.7rem !important;
+}
+
+.payment-container
+{
+    background-color: #ddd;
+    flex-basis: 40px;
+}
+
+.product-list
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap:20px;
+}
+
+.product-list .card-text
+{
+    flex-basis: 100px;
+    overflow-y: auto;
+}
+
+.product-list .card-img-top
+{
+    height: 80px;
+    width: auto;
+    object-fit: cover;
+}
+
+.bucket-list .img-container
+{
+    flex-basis: 48px;
+}
+
+.bucket-list .img-container > img
+{
+    width:40px;
+    height:40px;
+    object-fit: cover;
+}
+
+.table-title
+{
+    width:60%;
+}
